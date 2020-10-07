@@ -5,7 +5,7 @@
 
 namespace jm
 {
-	template<typename T>
+	template<typename T> //어떤 데이터 타입이 들어올지 모르므로 template형태로 데이터 타입을 만들어 둠 
 	class Vector2
 	{
 	public:
@@ -28,6 +28,7 @@ namespace jm
 		{
 		}
 
+		//operator
 		void operator += (const Vector2<T>& v)
 		{
 			x += v.x;

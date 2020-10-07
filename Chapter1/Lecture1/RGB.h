@@ -14,6 +14,7 @@ namespace jm
 		{}
 
 		// integer type rgb values are divided by 255.0f because OpenGL uses real rgb values.
+		// 실수로 바꾸어준다.(0~255의 int대신 실수를 인식하기 때문)
 		RGB(const int & cr, const int & cg, const int & cb)
 			: BASE(static_cast<float>(cr) / 255.0f, static_cast<float>(cg) / 255.0f, static_cast<float>(cb) / 255.0f)
 		{}

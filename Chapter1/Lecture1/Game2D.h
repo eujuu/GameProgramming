@@ -3,9 +3,9 @@
 #include "RGB.h" //색
 #include "Vector2.h" //2d 좌표 설정
 #include "Vector3.h" //3d 좌표 설정
-#include "Colors.h"
+#include "Colors.h" //색들을 미리 정의(rgb값)
 #include "Timer.h"
-#include "DrawFunctions.h"
+#include "DrawFunctions.h" //도형 그리기 
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
@@ -23,14 +23,15 @@ namespace jm
 	class Game2D
 	{
 	private:
+		//윈도우 창
 		int width = 640;
 		int height = 480;
 
-		GLFWwindow* glfw_window = nullptr;
+		GLFWwindow* glfw_window = nullptr; //창에 대한 포인터
 
 		Timer timer;
 
-		float spf = 1.0f / 60.0f;		 // second(s) per frame
+		float spf = 1.0f / 60.0f;		 // second(s) per frame(fps의 역수)
 
 		// control options
 		std::map<int, bool> key_status;  // key_id, is_pressed
@@ -38,6 +39,7 @@ namespace jm
 		bool draw_grid = false;
 
 	public:
+		//생성자
 		Game2D()
 		{}
 
@@ -53,7 +55,7 @@ namespace jm
 
 		bool isKeyPressed(const int& key);
 		bool isKeyReleased(const int & key);
-		bool isKeyPressedAndReleased(const int& key);
+		bool isKeyPressedAndReleased(const int& key); //눌렀다가 뗀 액션
 
 		bool isMouseButtonPressed(const int& mbtn);
 		bool isMouseButtonReleased(const int& mbtn);
@@ -61,16 +63,16 @@ namespace jm
 
 		vec2 getCursorPos(const bool& screen_coordinates = true);
 
-		float getTimeStep();
+		float getTimeStep(); //한 프레임 당 시간이 얼마나 흘렀는지
 
 		void drawGrid();
 
-		void run();
+		void run(); //중요
 
-		virtual void update() 
+		virtual void update()  //중요
 		{
 			// draw
-			// play sould
+			// play sound
 			// physics update
 			// etc.
 		}
