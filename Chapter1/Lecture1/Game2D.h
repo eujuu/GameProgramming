@@ -1,8 +1,8 @@
 #pragma once
 
-#include "RGB.h"
-#include "Vector2.h"
-#include "Vector3.h"
+#include "RGB.h" //»ö
+#include "Vector2.h" //2d ÁÂÇ¥ ¼³Á¤
+#include "Vector3.h" //3d ÁÂÇ¥ ¼³Á¤
 #include "Colors.h"
 #include "Timer.h"
 #include "DrawFunctions.h"
