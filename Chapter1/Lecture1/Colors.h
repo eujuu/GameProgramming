@@ -2,7 +2,7 @@
 
 #include "RGB.h"
 
-namespace jm
+namespace ej
 {
 	namespace Colors
 	{

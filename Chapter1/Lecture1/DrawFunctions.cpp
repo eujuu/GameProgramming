@@ -2,7 +2,7 @@
 #include <math.h>
 #include <vector>
 
-namespace jm
+namespace ej
 {
 	float getRadian(const float & degree) // degree to radian
 	{

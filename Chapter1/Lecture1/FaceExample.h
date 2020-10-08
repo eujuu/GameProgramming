@@ -2,7 +2,7 @@
 
 #include "Game2D.h"
 
-namespace jm
+namespace ej
 {
 	class FaceExample : public Game2D
 	{

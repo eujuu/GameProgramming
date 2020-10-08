@@ -3,7 +3,7 @@
 #include <cassert>
 #include <iostream>
 
-namespace jm
+namespace ej
 {
 	template<typename T> //어떤 데이터 타입이 들어올지 모르므로 template형태로 데이터 타입을 만들어 둠 
 	class Vector2

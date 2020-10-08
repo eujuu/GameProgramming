@@ -2,7 +2,7 @@
 
 #include <chrono> // for std::chrono functions
 
-namespace jm
+namespace ej
 {
 	class Timer
 	{

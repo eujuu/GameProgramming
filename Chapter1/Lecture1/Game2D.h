@@ -15,7 +15,7 @@
 #include <string>
 #include <map>
 
-namespace jm
+namespace ej
 {
 	using vec2 = Vector2<float>;
 	using vec3 = Vector3<float>;
@@ -36,7 +36,7 @@ namespace jm
 		// control options
 		std::map<int, bool> key_status;  // key_id, is_pressed
 		std::map<int, bool> mbtn_status; // mouse_button_id, is_pressed
-		bool draw_grid = false;
+		bool draw_grid = true;
 
 	public:
 		//»ý¼ºÀÚ

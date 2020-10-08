@@ -4,7 +4,7 @@
 #include <iostream>
 #include <iomanip>
 
-namespace jm
+namespace ej
 {
 	Game2D::Game2D(const std::string & _title, const int & _width, const int & _height,
 				   const bool & use_full_screen, 
@@ -277,7 +277,7 @@ namespace jm
 
 		if (draw_grid) {
 			setLineWidth(1);
-			jm::drawGrid(Colors::gray, 0.5f); //Note: Game2D::drawGrid() vs jm::drawGrid(...)
+			ej::drawGrid(Colors::gray, 0.5f); //Note: Game2D::drawGrid() vs jm::drawGrid(...)
 		}
 	}
 }

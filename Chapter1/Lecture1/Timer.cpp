@@ -1,6 +1,6 @@
 #include "Timer.h"
 
-namespace jm
+namespace ej
 {
 	void Timer::reset()
 	{

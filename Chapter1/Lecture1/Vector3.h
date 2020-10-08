@@ -2,7 +2,7 @@
 
 #include <cassert>
 
-namespace jm
+namespace ej
 {
 	template<typename T>
 	class Vector3
