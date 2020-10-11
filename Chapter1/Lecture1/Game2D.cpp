@@ -220,7 +220,7 @@ namespace ej
 		if (glfw_window == nullptr)
 			init("This is my digital canvas!", 1280, 960, false); // initialize with default setting
 
-		while (!glfwWindowShouldClose(glfw_window))// 게임의 main loop(중요)
+		while (!glfwWindowShouldClose(glfw_window))// 게임의 main loop(중요), 게임 시작 후 끝날때까지 해당 루프가 계속 반복
 		{
 			if (isKeyPressed(GLFW_KEY_ESCAPE)) {
 				std::cout << "ESC key ends main loop" << std::endl;
