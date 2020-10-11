@@ -18,6 +18,9 @@ namespace ej
 	public:
 		void update() override
 		{
+			if (isKeyPressedAndReleased(GLFW_KEY_SPACE)) {
+				translate(0.0f, 0.02f * time);
+			}
 			// gold face
 			beginTransformation();
 			translate(0.0f, 0.12f);
@@ -27,6 +30,26 @@ namespace ej
 
 			endTransformation();
 
+			// green left leg
+			beginTransformation();
+			{
+				translate(0.0f, -0.6f);
+				translate(0.0f, 0.2f);
+				rotate(sinf(time * 5.0f + 3.141592f) * -30.0f);	// animation!
+				translate(0.0f, -0.2f);
+				drawFilledBox(Colors::green, 0.1f, 0.4f);
+			}
+			endTransformation();
+
+			// yellow left arm
+			beginTransformation();
+			{
+				rotate(sin(time * 5.0f) * -30.0f);					// animation!
+				scale(1.0f, 2.0f);
+				translate(0.0f, -0.1f);
+				drawFilledBox(Colors::yellow, 0.05f, 0.18f);
+			}
+			endTransformation();
 			// red body
 			beginTransformation();
 			scale(1.0f, 2.0f);
@@ -34,7 +57,7 @@ namespace ej
 			drawFilledBox(Colors::red, 0.13f, 0.2f);
 			endTransformation();
 
-			// yellow arm
+			// yellow right arm
 			beginTransformation();
 			rotate(sin(time*5.0f) * 30.0f);					// animation!
 			scale(1.0f, 2.0f);
@@ -42,7 +65,8 @@ namespace ej
 			drawFilledBox(Colors::yellow, 0.05f, 0.18f);
 			endTransformation();
 
-			// green leg
+			
+			// green right leg
 			beginTransformation();
 			translate(0.0f, -0.6f);
 			translate(0.0f, 0.2f);
