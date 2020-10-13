@@ -190,14 +190,16 @@ namespace ej
 	{
 		double x_pos, y_pos;
 		glfwGetCursorPos(glfw_window, &x_pos, &y_pos);
+		//window의 x좌표와 y좌표를 가져와줌(윈도우 좌표계!)
+		
 		// Note that (0, 0) is left up corner. 
 		// This is different from our screen coordinates.
-		// 0 <= x <= width - 1
-		// height - 1 >= y >= 0 
+		// 0 <= x <= width - 1 //범위를 벗어나면 다른 값이 나오게 됨
+		// height - 1 >= y >= 0  //위로 갈수록 값이 작아짐
 
 		if (screen_coordinates) // assumes width >= height
 		{
-			// upside down y direction
+			// upside down y direction, 위아래를 뒤집어주는 역할
 			y_pos = height - y_pos - 1; // 0 <= y <= height - 1
 
 			// rescale and translate zero to center

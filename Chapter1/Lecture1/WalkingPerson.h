@@ -50,6 +50,7 @@ namespace ej
 				drawFilledBox(Colors::yellow, 0.05f, 0.18f);
 			}
 			endTransformation();
+
 			// red body
 			beginTransformation();
 			scale(1.0f, 2.0f);
@@ -65,7 +66,6 @@ namespace ej
 			drawFilledBox(Colors::yellow, 0.05f, 0.18f);
 			endTransformation();
 
-			
 			// green right leg
 			beginTransformation();
 			translate(0.0f, -0.6f);
